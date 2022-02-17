@@ -1,0 +1,36 @@
+body {
+    background: lightgreen;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: black;
+}
+
+.App-title {
+    text-align: center;
+    color: lightcoral;
+    font-size: 30px;
+}
+
+.Container {
+    border: 5px solid lightsalmon;
+    border-radius: 25px;
+    width: 50%;
+    margin-left: 22em;
+   
+}
+
+.btn {
+    background: lightpink;
+    margin: 20px;
+}
+
+.add-btn {
+    background: lightseagreen;
+    width: 40px;
+    height: 40px;
+}
+
+.input {
+    align-items: center;
+    text-align: center;
+}

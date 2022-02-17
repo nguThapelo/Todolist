@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -26,58 +27,83 @@ class App extends Component {
 
     this.setState({
       list,
-      newItem:""
+      newItem: ""
     })
   }
 
-
-  deleteItem(id){
+  deleteItem(id) {
     const list = [...this.state.list]
 
     const updatedList = list.filter(item => item.id !== id);
 
-    this.setState({list: updatedList});
+    this.setState({ list: updatedList });
   }
 
   render() {
     return (
-      <div className="App">
-        <div>
-          <label>
-             Add item here ...
-          </label>
-         
-            <br/>
+
+      <div>
+
+       
+
+        <div className="App-title">
+          <h1>
+            Your Todo-List
+          </h1>
         </div>
-             
-          <input
-            type="text"
-            placeholder="Enter Your Item Here ..."
-            value={this.state.newItem}
-            onChange={i => this.updateInput("newItem", i.target.value)}
-          />
+ <div className='Container'>
+<div style={{
+  padding: 30,
+  textAlign: "left",
+  maxWidth: 500,
+  margin: "auto"
+}}
+>
+<div className='input'>
 
-          <button onClick={() => this.addItem()}>
-            Add Item
-           </button>
 
-<br/>
+        <label>
+          Add item here ...
+        </label>
 
-<ul>
-  {this.state.list.map(item => {
-    return (
-      <li key={item.id}>
-        <button onClick={() => {this.delete(item.id)}}>
-X
+        <br />
+
+        <input
+          type="text"
+          placeholder="Enter Your Item Here ..."
+          value={this.state.newItem}
+          onChange={i => this.updateInput("newItem", i.target.value)}
+        />
+
+        <button onClick={() => this.addItem()} className="add-btn btn-floating">
+          <i class="material-icons"> + </i> 
         </button>
 
-      </li>
-    )
-  })
-}
-</ul>
+        <br />
+        <div className='input'>
+        <ul>
+          {this.state.list.map(item => {
+            return (
+              <li key={item.id}>
+                {item.value}
+                <button onClick={() => this.deleteItem(item.id)} className="btn btn-floating">
+                 <i class="material-icons"> X </i> 
+                </button>
+
+              </li>
+               
+            )
+          })
+          } 
+           </ul>
+          </div>
+       
+        </div>
+        </div>
+
+        </div>
       </div>
-     
+
     )
   }
 }
