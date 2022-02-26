@@ -1,31 +1,35 @@
 body {
-    background: lightgreen;
-    font-family: 'Montserrat', sans-serif;
+    background: #0000;
+    font-family: cursive;
     font-size: 15px;
-    color: black;
+    color: coral;
+    font-weight: bold;
+  
+}
+.box {
+     margin-left: 35em;
+     margin-top: 6em;
+    
 }
 
 .App-title {
-    text-align: center;
     color: lightcoral;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .Container {
     border: 5px solid lightsalmon;
-    border-radius: 25px;
-    width: 50%;
-    margin-left: 22em;
-   
+    border-radius: 15px;
+    width: 300px; 
 }
 
 .btn {
-    background: lightpink;
+    background: coral;
     margin: 20px;
 }
 
 .add-btn {
-    background: lightseagreen;
+    background: coral;
     width: 40px;
     height: 40px;
 }
@@ -33,4 +37,48 @@ body {
 .input {
     align-items: center;
     text-align: center;
+}
+
+.input li {
+    list-style: none;
+}
+
+@media (max-width: 790px) {
+    .box {
+        margin-left: 10em;
+        margin-top: 6em;
+   }
+
+   .App-title {
+    color: lightcoral;
+    font-size: 10px;
+}
+
+.Container {
+    border: 5px solid lightsalmon;
+    border-radius: 10px;
+    width: 150px; 
+}
+
+.btn {
+    background: coral;
+    margin: 10px;
+}
+
+.add-btn {
+    background: coral;
+    width: 20px;
+    height: 20px;
+}
+
+input {
+    
+    align-items: center;
+    text-align: center;
+    width: 90px;
+}
+
+
+
+
 }

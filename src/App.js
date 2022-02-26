@@ -42,64 +42,63 @@ class App extends Component {
   render() {
     return (
 
-      <div>
-
-       
-
+      <div className="box">
         <div className="App-title">
           <h1>
-            Your Todo-List
+            My Todo-List
           </h1>
         </div>
- <div className='Container'>
-<div style={{
-  padding: 30,
-  textAlign: "left",
-  maxWidth: 500,
-  margin: "auto"
-}}
->
-<div className='input'>
+        <div className='Container'>
+          <div style={{
+            padding: 30,
+            textAlign: "left",
+            maxWidth: 500,
+            margin: "auto"
+          }}
+          >
+            <div className='input'>
 
+              <label>
+                <h3 >
+                  Add Task(s) here ...
+                </h3>
+                
+              </label>
 
-        <label>
-          Add item here ...
-        </label>
+              <br />
 
-        <br />
+              <input
+                type="text"
+                placeholder="Enter Task Here ..."
+                value={this.state.newItem}
+                onChange={i => this.updateInput("newItem", i.target.value)}
+              />
 
-        <input
-          type="text"
-          placeholder="Enter Your Item Here ..."
-          value={this.state.newItem}
-          onChange={i => this.updateInput("newItem", i.target.value)}
-        />
+              <button onClick={() => this.addItem()} className="add-btn btn-floating">
+                <i className="material-icons"> + </i>
+              </button>
 
-        <button onClick={() => this.addItem()} className="add-btn btn-floating">
-          <i class="material-icons"> + </i> 
-        </button>
+              <br />
+              <h3>My Tasks</h3>
+              <div className='input'>
+                <ul>
+                  {this.state.list.map(item => {
+                    return (
+                      <li key={item.id}>
+                        {item.value}
+                       
+                        <button onClick={() => this.deleteItem(item.id)} className="btn btn-floating">
+                          <i className="material-icons"> X </i>
+                        </button>
+                      </li>
+                    )
+                  })
+                  }
+                </ul>
+              </div>
 
-        <br />
-        <div className='input'>
-        <ul>
-          {this.state.list.map(item => {
-            return (
-              <li key={item.id}>
-                {item.value}
-                <button onClick={() => this.deleteItem(item.id)} className="btn btn-floating">
-                 <i class="material-icons"> X </i> 
-                </button>
-
-              </li>
-               
-            )
-          })
-          } 
-           </ul>
+            </div>
           </div>
-       
-        </div>
-        </div>
 
         </div>
       </div>
