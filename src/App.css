@@ -2,7 +2,7 @@ body {
     background: #0000;
     font-family: cursive;
     font-size: 15px;
-    color: coral;
+    color:green;
     font-weight: bold;
   
 }
@@ -13,14 +13,15 @@ body {
 }
 
 .App-title {
-    color: lightcoral;
+    margin-left: 4em;
+    color: Green;
     font-size: 20px;
 }
 
 .Container {
     border: 5px solid lightsalmon;
     border-radius: 15px;
-    width: 300px; 
+    width: 400px; 
 }
 
 .btn {
@@ -50,6 +51,7 @@ body {
    }
 
    .App-title {
+       margin-left: 1em;
     color: lightcoral;
     font-size: 10px;
 }
